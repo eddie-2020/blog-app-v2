@@ -19,6 +19,8 @@ gem 'stimulus-rails'
 
 gem 'jbuilder'
 
+gem 'cssbundling-rails'
+
 gem 'tzinfo-data'
 
 gem 'bootsnap', require: false
