@@ -4,7 +4,7 @@
       <div class="d-flex align-items-center justify-content-between">
         <h4 class="fs-5"> <%= @post.title %> by <%= @user.name %> </h4>
 
-        <p class="fs-5 text-secondary"> Comments : <span class="fw-bolder"><%= @post.comments.size %></span> Likes : <span class="fw-bolder"><%= @post.likes.size %></span></p>
+        <p class="fs-5 text-secondary"> Comments : <span class="fw-bolder"><%= @post.comments_counter || 0 %></span>, Likes : <span class="fw-bolder"><%= @post.likes_counter || 0 %></span></p>
       </div>
 
       <div class="mt-3">
@@ -14,10 +14,21 @@
 
     <article>
       <div>
-        <% @post.five_most_recent_comments.each do |comment| %>
-        <div>
-          <li> <%= comment.users.name %>: <%= comment.text %> </li>
-        </div>
+        <%= form_with url: "#{@post.id}/likes" do |form| %>
+          <%= form.submit "Like" %>
+        <% end %>
+      </div>
+
+      <div>
+        <% @post.comments.each do |comment| %>
+          <p><%= comment.user.name %> : <%= comment.text %></p>
+        <% end %>
+      </div>
+
+      <div>
+        <%= form_with url: "#{@post.id}/comments", scope: :comment do |form| %>
+          <%= form.text_area :text, placeholder: "Type something here...", rows: 14, required: true %>
+          <%= form.submit "Comment" %>
         <% end %>
       </div>
     </article>
