@@ -1,0 +1,17 @@
+<section>
+    <%= form_with model: @post, url: user_posts_path, scope: :post do |form| %>
+    <div>
+        <%= form.label :title, "Title" %>
+        <%= form.text_field :title, placeholder: "Title", required: true %>
+    </div>
+
+    <div>
+        <%= form.label :text, "What is this post about?" %>
+        <%= form.text_area :text, placeholder: 'Type here...', rows: 14, required: true %>
+    </div>
+
+    <div>
+        <%= form.submit "Post" %>
+    </div>
+    <% end %>
+</section>
