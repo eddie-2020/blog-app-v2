@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Posts', type: :request do
   describe 'Get /index' do
     before :each do
-      get '/users/1/posts'
+      get '/users/3/posts'
     end
 
     it 'should respond to the correct http status' do
@@ -15,7 +15,7 @@ RSpec.describe 'Posts', type: :request do
     end
 
     it 'should respond to the correct placeholder text' do
-      expect(response.body).to include('Here is a list of posts')
+      expect(response.body).to include('All Posts')
     end
   end
 
