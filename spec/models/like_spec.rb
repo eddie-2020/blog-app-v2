@@ -1,5 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'Validations' do
+    subject { Like.new(author_id: 6, post_id: 1) }
+
+    before { subject.save }
+
+    it 'should be an integer of author id' do
+      subject.author_id = 'a'
+      expect(subject).to_not be_valid
+    end
+
+    it 'should be an integer of post id' do
+      subject.post_id = 'b'
+      expect(subject).to_not be_valid
+    end
+  end
 end

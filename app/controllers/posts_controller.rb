@@ -1,10 +1,12 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
+    @post = @user.posts.order(created_at: :desc).includes(:comments, :likes)
   end
 
   def show
-    @post = Post.find(params[:id])
+    @user = User.find(params[:user_id])
+    @post = @user.posts.includes(:comments, :likes).find(params[:id])
   end
 
   def new
@@ -12,13 +14,11 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
-    @post.author = current_user
-
+    @post = current_user.posts.build(post_params)
     if @post.save
       redirect_to root_path, notice: 'Successfully created post.'
     else
-      render :new
+      render :new, alert: 'Post was not saved'
     end
   end
 

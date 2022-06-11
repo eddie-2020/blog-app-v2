@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     @comment.post_id = params[:post_id]
 
     if @comment.save
-      redirect_to root_path, notice: 'Successfully created comment.'
+      redirect_to root_path, notice: "Successfully created comment at #{current_user.name}"
     else
       render :new
     end

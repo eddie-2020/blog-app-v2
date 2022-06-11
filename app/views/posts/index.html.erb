@@ -1,4 +1,5 @@
 <div class="center flex-column m-3">
+  <h1 class="text-center"> All Posts </h1>
   <%= render partial: "shared/user", locals: {user: @user}%>
   <div class="d-flex flex-column w-50 w-100-mobile">
     <% if @user.posts.empty? %>

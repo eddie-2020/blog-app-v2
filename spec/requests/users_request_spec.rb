@@ -15,7 +15,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'should respond to the correct placeholder text' do
-      expect(response.body).to include('Here is the users home page')
+      expect(response.body).to include('Welcome to my Blog App')
     end
   end
 
@@ -33,7 +33,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'should respond to the correct placeholder text' do
-      expect(response.body).to include('Here is the users show page')
+      expect(response.body).to include('Users Profile')
     end
   end
 end
