@@ -102,10 +102,14 @@ You should include some additional methods.
 * Postgresql
 
 ## 👤 Author 
-Edward Yara :student: 
+Edward Yara  
 - GitHub: [@oluyaratosin123](https://github.com/oluyaratosin123)
 - Twitter: [@TOluyara](https://twitter.com/TOluyara)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/edward-oluyara/)
+
+Damdafayton :student:
+- [Github](https://github.com/damdafayton)
+- [LinkedIn](https://linkedin.com/in/damdafayton)
 
 ## Contributing :handshake:
 Contributions, issues, and feature requests are welcome!
