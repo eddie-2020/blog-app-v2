@@ -1,6 +1,13 @@
 # Blog_App_With_Rails
 This Blog app is a classic example of a blog website. I will be creating a full functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
+![](./app/assets/images/user_home_page.PNG)
+![](./app/assets/images/user_show_page.PNG)
+![](./app/assets/images/user_post_home_page.PNG)
+![](./app/assets/images/user_post_show_page.PNG)
+![Blog App Mobile](./app/assets/video/video1936355250.mp4)
+
+
 ## Milestone-1
 - For each URL you should create:
   - A route.
