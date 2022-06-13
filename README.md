@@ -5,7 +5,6 @@ This Blog app is a classic example of a blog website. I will be creating a full 
 ![](./app/assets/images/user_show_page.PNG)
 ![](./app/assets/images/user_post_home_page.PNG)
 ![](./app/assets/images/user_post_show_page.PNG)
-![Blog App Mobile](./app/assets/video/video1936355250.mp4)
 
 
 ## Milestone-1
@@ -69,6 +68,15 @@ You should include some additional methods.
 - Add flash messages in the create actions in all your controllers.
 - Make sure that the N+1 problem is solved when fetching all posts and their comments for a user.
 
+## Milestone-8
+- Remove `current_user` method in `ApplicationController`, devise will provide us with one.
+- [Install and setup devise](https://github.com/heartcombo/devise#getting-started).
+  - Can register a new user.
+  - User logs in with a combination of email and password.
+  - Hashed password should be stored in the database.
+  - Ask for confirmation of email.
+  - Can reset password.
+- [Modify the views in devise](https://github.com/heartcombo/devise#configuring-views) for registration and login to match [the wireframes from the Sneak Peek](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/sneak_peek.md#:~:text=For%20this%20project%20you%20will%20have%20full%20freedom%20in%20terms%20of%20visual%20design%20but%20you%20will%20need%20to%20keep%20the%20following%20wireframes%3A) and your styling.
 
 ## Clone Project
 - STEP 1:
