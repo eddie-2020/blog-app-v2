@@ -1,4 +1,4 @@
-# Blog_App_With_Rails
+# Blog_App-II
 This Blog app is a classic example of a blog website. I will be creating a full functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 ![](./app/assets/images/user_home_page.PNG)
@@ -71,9 +71,9 @@ You should include some additional methods.
 
 ## Clone Project
 - STEP 1:
-  - git clone `git@github.com:oluyaratosin123/Blog_App_With_Rails.git`
+  - git clone `git@github.com:oluyaratosin123/Blog-App-II.git`
 - STEP 2:
-  - `cd Blog_App_With_Rails` in your terminal
+  - `cd Blog_App_II` in your terminal
 - STEP 3:
   - run `rails server` or `rails s` in your terminal
 - STEP 4:
