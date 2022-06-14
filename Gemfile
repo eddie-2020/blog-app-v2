@@ -21,6 +21,8 @@ gem 'jbuilder'
 
 gem 'cssbundling-rails'
 
+gem 'devise'
+
 gem 'tzinfo-data'
 
 gem 'bootsnap', require: false
