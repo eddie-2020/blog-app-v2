@@ -80,9 +80,9 @@ You should include some additional methods.
 
 ## Clone Project
 - STEP 1:
-  - git clone `git@github.com:oluyaratosin123/Blog_App_With_Rails.git`
+  - git clone `git@github.com:oluyaratosin123/Blog-App-II.git`
 - STEP 2:
-  - `cd Blog_App_With_Rails` in your terminal
+  - `cd Blog-App-II` in your terminal
 - STEP 3:
   - run `rails server` or `rails s` in your terminal
 - STEP 4:
@@ -107,7 +107,7 @@ Edward Yara
 - Twitter: [@TOluyara](https://twitter.com/TOluyara)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/edward-oluyara/)
 
-Damdafayton :student:
+Damdafayton
 - [Github](https://github.com/damdafayton)
 - [LinkedIn](https://linkedin.com/in/damdafayton)
 
@@ -115,7 +115,7 @@ Damdafayton :student:
 Contributions, issues, and feature requests are welcome!
 
 ## Show your support
-Give a 	:star: if you like this project.
+Give a :star: if you like this project.
 
 ## Acknowledgments
 * Hat tip to anyone whose code was used
