@@ -19,6 +19,8 @@ gem 'stimulus-rails'
 
 gem 'jbuilder'
 
+gem 'cancancan'
+
 gem 'cssbundling-rails'
 
 gem 'devise'

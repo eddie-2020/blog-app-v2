@@ -10,6 +10,6 @@ class User < ApplicationRecord
   validates :name, length: { minimum: 1 }
 
   def recent_posts
-    posts.order('created_at Desc').limit(3)
+    posts.order('created_at Asc').limit(3)
   end
 end
