@@ -11,5 +11,6 @@ class Ability
     can :manage, Like, author_id: user.id
     # can :read, Post, user: user
     return unless user.is?(:admin) # additional permissions for administrators
+    can :manage, :all
   end
 end
