@@ -10,27 +10,27 @@ RSpec.describe Post, type: :model do
 
     before { subject.save }
 
-    it 'should have attribute title' do
+    it 'haves attribute title' do
       subject.title = nil
       expect(subject).to_not be_valid
     end
 
-    it 'should not be greater than 250 characters' do
+    it 'is not greater than 250 characters' do
       subject.title = 'Hello'
       expect(subject).to be_valid
     end
 
-    it 'should be an integer of comments counter' do
+    it 'bes an integer of comments counter' do
       subject.comments_counter = 2
       expect(subject).to be_valid
     end
 
-    it 'should have comments counter greater than or equal to 0' do
+    it 'haves comments counter greater than or equal to 0' do
       subject.comments_counter = -1
       expect(subject).to_not be_valid
     end
 
-    it 'should have likes counter greater than or equal to 0' do
+    it 'haves likes counter greater than or equal to 0' do
       subject.likes_counter = -1
       expect(subject).to_not be_valid
     end
@@ -41,7 +41,7 @@ RSpec.describe Post, type: :model do
     end
 
     describe 'should test post model' do
-      it 'should render recent comments' do
+      it 'renders recent comments' do
         expect(subject.recent_comments).to eq(subject.comments.last(5))
       end
     end

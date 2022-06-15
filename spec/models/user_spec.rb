@@ -8,12 +8,12 @@ RSpec.describe User, type: :model do
 
     before { subject.save }
 
-    it 'should have name attributes present' do
+    it 'haves name attributes present' do
       subject.name = nil
       expect(subject).to_not be_valid
     end
 
-    it 'should have bio attributes present' do
+    it 'haves bio attributes present' do
       subject.bio = nil
       expect(subject).to_not be_valid
     end
