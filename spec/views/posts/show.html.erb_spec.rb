@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+# rubocop:disable Metrics/BlockLength
 RSpec.describe 'Posts', type: :system do
   context 'show page' do
     before(:each) do
@@ -46,3 +46,4 @@ RSpec.describe 'Posts', type: :system do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
