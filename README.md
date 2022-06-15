@@ -1,5 +1,6 @@
-# Blog_App-II
-This Blog app is a classic example of a blog website. I will be creating a full functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
+# Blog_App_With_Rails
+This Blog app is a classic example of a blog website. And the creation of a full functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
+
 
 ![](./app/assets/images/user_home_page.PNG)
 ![](./app/assets/images/user_show_page.PNG)
@@ -77,6 +78,14 @@ You should include some additional methods.
   - Ask for confirmation of email.
   - Can reset password.
 - [Modify the views in devise](https://github.com/heartcombo/devise#configuring-views) for registration and login to match [the wireframes from the Sneak Peek](https://github.com/microverseinc/curriculum-rails/blob/main/blog-app/sneak_peek.md#:~:text=For%20this%20project%20you%20will%20have%20full%20freedom%20in%20terms%20of%20visual%20design%20but%20you%20will%20need%20to%20keep%20the%20following%20wireframes%3A) and your styling.
+
+## Milestone-9
+- Install CanCanCan in your project.
+- Add a role column to the users table. Remember to use a migration for this.
+- A user can delete a post if it is theirs or if they have an admin role (column role has value "admin"). Use CanCanCan for this authorization.
+  - For that you need to implement the post deleting functionality. Add the "Delete" button to the view and make sure that only authorized users can see it.
+- A user can delete a comment if it is theirs or if they have an admin role (column role has value "admin"). Use CanCanCan for this authorization.
+  - For that you need to implement the comment deleting functionality. Add the "Delete" button to the view and make sure that only authorized users can see it.
 
 ## Clone Project
 - STEP 1:

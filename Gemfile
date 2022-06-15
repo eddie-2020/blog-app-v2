@@ -19,6 +19,8 @@ gem 'stimulus-rails'
 
 gem 'jbuilder'
 
+gem 'cancancan'
+
 gem 'cssbundling-rails'
 
 gem 'devise'
@@ -30,8 +32,10 @@ gem 'bootsnap', require: false
 gem 'rubocop', '>= 1.0', '< 2.0'
 
 group :development, :test do
+  gem 'capybara'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails'
+  gem 'webdrivers'
 end
 
 group :development do
@@ -39,7 +43,5 @@ group :development do
 end
 
 group :test do
-  gem 'capybara'
   gem 'selenium-webdriver'
-  gem 'webdrivers'
 end
