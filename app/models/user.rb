@@ -9,6 +9,12 @@ class User < ApplicationRecord
 
   validates :name, length: { minimum: 1 }
 
+  ROLES = %i[admin moderator author banned].freeze
+
+  def is?(requested_role)
+    role == requested_role.to_s
+  end
+
   def recent_posts
     posts.order('created_at Asc').limit(3)
   end
