@@ -25,6 +25,8 @@ gem 'cssbundling-rails'
 
 gem 'devise'
 
+gem 'ffi'
+
 gem 'tzinfo-data'
 
 gem 'bootsnap', require: false
