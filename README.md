@@ -6,7 +6,7 @@ This Blog app is a classic example of a blog website. And the creation of a full
 ![](./app/assets/images/user_show_page.PNG)
 ![](./app/assets/images/user_post_home_page.PNG)
 ![](./app/assets/images/user_post_show_page.PNG)
-
+![](./app/assets/images/CaptureXIX.PNG)
 
 ## Milestone-1
 - For each URL you should create:
