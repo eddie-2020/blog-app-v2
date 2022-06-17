@@ -35,15 +35,14 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 group :development, :test do
   gem 'capybara'
+  gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'factory_bot_rails', '~> 5.1'
   gem 'rspec-rails'
+  gem 'selenium-webdriver'
   gem 'webdrivers'
 end
 
 group :development do
   gem 'web-console'
-end
-
-group :test do
-  gem 'selenium-webdriver'
 end

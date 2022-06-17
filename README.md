@@ -6,7 +6,7 @@ This Blog app is a classic example of a blog website. And the creation of a full
 ![](./app/assets/images/user_show_page.PNG)
 ![](./app/assets/images/user_post_home_page.PNG)
 ![](./app/assets/images/user_post_show_page.PNG)
-
+![](./app/assets/images/CaptureXIX.PNG)
 
 ## Milestone-1
 - For each URL you should create:
@@ -87,6 +87,50 @@ You should include some additional methods.
 - A user can delete a comment if it is theirs or if they have an admin role (column role has value "admin"). Use CanCanCan for this authorization.
   - For that you need to implement the comment deleting functionality. Add the "Delete" button to the view and make sure that only authorized users can see it.
 
+## Milestone-10
+- Login page:
+   - I can see the username and password inputs and the "Submit" button.
+   - When I click the submit button without filling in the username and the password, I get a detailed error.
+   - When I click the submit button after filling in the username and the password with incorrect data, I get a detailed error.
+   - When I click the submit button after filling in the username and the password with correct data, I am redirected to the root page.
+
+- User index page:
+   - I can see the username of all other users.
+   - I can see the profile picture for each user.
+   - I can see the number of posts each user has written.
+   - When I click on a user, I am redirected to that user's show page.
+
+- User show page:
+   - I can see the user's profile picture.
+   - I can see the user's username.
+   - I can see the number of posts the user has written.
+   - I can see the user's bio.
+   - I can see the user's first 3 posts.
+   - I can see a button that lets me view all of a user's posts.
+   - When I click a user's post, it redirects me to that post's show page.
+   - When I click to see all posts, it redirects me to the user's post's index page.
+
+- User post index page:
+   - I can see the user's profile picture.
+   - I can see the user's username.
+   - I can see the number of posts the user has written.
+   - I can see a post's title.
+   - I can see some of the post's body.
+   - I can see the first comments on a post.
+   - I can see how many comments a post has.
+   - I can see how many likes a post has.
+   - I can see a section for pagination if there are more posts than fit on the view.
+   - When I click on a post, it redirects me to that post's show page.
+
+- Post show page:
+   - I can see the post's title.
+   - I can see who wrote the post.
+   - I can see how many comments it has.
+   - I can see how many likes it has.
+   - I can see the post body.
+   - I can see the username of each commentor.
+   - I can see the comment each commentor left.
+   
 ## Clone Project
 - STEP 1:
   - git clone `git@github.com:oluyaratosin123/Blog-App-II.git`

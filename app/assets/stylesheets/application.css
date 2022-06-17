@@ -24,6 +24,10 @@ ul {
   margin: auto;
 }
 
+.user-image {
+  width: 100px;
+}
+
 @media only screen and (max-width: 900px) {
   .w-100-mobile {
     width: 100% !important;
