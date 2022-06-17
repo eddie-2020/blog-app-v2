@@ -2,10 +2,9 @@
   <h1 class="mt-2 mb-2">Welcome to my Blog App</h1>
   <% @users.each do |user| %>
     <div class="d-flex w-50 w-100-mobile mb-3 border border-secondary border-2 p-2">
-      <div class="avatar-image"><%= image_tag("icons8-user-50.png") %></div>
+      <img class='user-image' src=<%= user.photo %> />
       <div class="d-flex flex-column align-items-end justify-content-center w-100 bg-light p-2">
-        <%= link_to "View Profile", user_path(user.id), class: "btn btn-primary" %>
-        <h2 class="align-self-start"><%= user.name %></h2>
+        <h2 class="align-self-start user_detail_div"><%= link_to user.name, user_path(user.id) %></h2>
         <p>
           Number of posts
           <span class="badge bg-primary">
@@ -16,3 +15,5 @@
     </div>
   <% end %>
 </div>
+
+<%# https://img.icons8.com/color/48/000000/instagram-new--v2.png %>

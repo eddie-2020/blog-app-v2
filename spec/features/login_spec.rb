@@ -1,51 +1,54 @@
 require 'rails_helper'
+# rubocop:disable Metrics/BlockLength
+RSpec.describe 'Devise sessions', type: :system do
+  context 'After Login page loads, ' do
+    before(:each) do
+      driven_by(:rack_test)
 
-RSpec.describe 'Login Page,' do
-  before { visit user_session_path }
+      @user = User.create(name: 'Edward', photo: 'https://img.icons8.com/color/48/000000/instagram-new--v2.png',
+                          bio: 'Full Stack Developer',
+                          email: 'oluyaratosin123@gmail.com',
+                          password: 'Yara123#@', password_confirmation: 'Yara123#@')
+      @user.confirm
 
-  describe 'Integrate to' do
-    it 'shows the email input' do
-      expect(page).to have_content('Email')
+      visit new_user_session_path
     end
 
-    it 'shows the password input' do
-      expect(page).to have_content('Password')
+    it 'I can see the username input field' do
+      expect(page).to have_field('Email')
     end
 
-    it 'shows the submit button' do
-      expect(page).to have_content('Log in')
-    end
-  end
-
-  describe 'When the submit button is been clicked it should,' do
-    it 'show detailed error if username and password is not filled' do
-      click_button 'Log in'
-      expect(page).to have_content('Invalid Email or password')
+    it 'I can see the passwword input field' do
+      expect(page).to have_field('Password')
     end
 
-    it 'show detailed error if incorrect data filled in' do
-      fill_in 'Email', with: 'oluyaratosin1@gmail.com'
-      click_button 'Log in'
-      expect(page).to have_content('Invalid Email or password')
+    it 'I can see the "Submit" button' do
+      click_button('Log in')
     end
 
-    it 'show detailed error to confirm email if email is not confirmed' do
-      fill_in 'Email', with: 'oluyaratosin123@gmail.com'
-      fill_in 'Password', with: 'Yara123#@'
-      click_button 'Log in'
-      expect(page).to have_content('You have to confirm your email address before continuing')
+    it 'When I click the submit button without filling in the username and the password,
+        I get a detailed error.' do
+      click_button('Log in')
+      expect(page).to have_content('Invalid Email or password.')
     end
 
-    it 'show success message and redirects to root page if correct data is filled in' do
-      # confirm user email
-      User.find(1).update(confirmed_at: DateTime.now)
+    it 'When I click the submit button after filling in the username and the password with incorrect data,
+        I get a detailed error.' do
+      fill_in('Email', with: 'e@gmail.com')
+      fill_in('Password', with: '123456')
+      click_button('Log in')
+      expect(page).to have_content('Invalid Email or password.')
+    end
 
-      fill_in 'Email', with: 'oluyaratosin123@gmail.com'
-      fill_in 'Password', with: 'Yara123#@'
-      click_button 'Log in'
+    it 'When I click the submit button after filling in the username and the password with correct data,
+        I am redirected to the root page.' do
+      fill_in('Email', with: 'oluyaratosin123@gmail.com')
+      fill_in('Password', with: 'Yara123#@')
+      click_button('Log in')
 
       expect(page).to have_content('Signed in successfully')
       expect(page).to have_current_path '/'
     end
   end
 end
+# rubocop:enable Metrics/BlockLength

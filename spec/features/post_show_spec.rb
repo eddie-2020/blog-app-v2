@@ -1,41 +1,50 @@
 require 'rails_helper'
 
-RSpec.describe 'User Post show page,' do
-  before do
-    @user = User.find(1)
-    @post = @user.posts[-1]
-    visit user_post_path(@user.id, @post.id)
-  end
+# rubocop:disable Metrics/BlockLength
+RSpec.describe 'Posts', type: :system do
+  context 'After post show integration, ' do
+    before(:each) do
+      driven_by(:rack_test)
 
-  describe 'renders' do
-    it 'post\'s title' do
+      @user = User.create(name: 'Edward', photo: 'https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg',
+                          bio: 'Full Stack Developer',
+                          email: 'yara123@gmail.com')
+      @user.confirm
+
+      @post = Post.create(author_id: @user.id, title: 'Post 1', text: 'First Post')
+
+      @comment = Comment.create(author_id: @user.id, post_id: @post.id, text: 'First Comment')
+
+      visit user_post_path(@user.id, @post.id)
+    end
+
+    it 'I can see the post\'s title' do
       expect(page).to have_content(@post.title)
     end
 
-    it 'who wrote the post' do
-      expect(page).to have_content(@post.user.name)
+    it 'I can see who wrote the post.' do
+      expect(page).to have_content(@post.author.name)
     end
 
-    it 'how many comments it has' do
-      expect(page).to have_content("Comments: #{@post.comments_counter}")
+    it 'I can see how many comments it has.' do
+      expect(page).to have_content('Comments 1')
     end
 
-    it 'how many likes it has' do
-      expect(page).to have_content("Likes: #{@post.likes_counter}")
+    it 'I can see how many likes it has.' do
+      expect(page).to have_content('Likes 0')
     end
 
-    it 'the post body' do
+    it 'I can see the post body.' do
       expect(page).to have_content(@post.text)
     end
 
-    it 'name of each commentor' do
-      commentor = @post.comments[-1].user.name
-      expect(page).to have_content(commentor)
+    it 'I can see the username of each commentor.' do
+      expect(page).to have_content(@comment.author.name)
     end
 
-    it 'comment of each commentor' do
-      commentor_left = @post.comments[-1].text
-      expect(page).to have_content(commentor_left)
+    it 'I can see the comment each commentor left.' do
+      expect(page).to have_content(@comment.text)
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
