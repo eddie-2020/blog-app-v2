@@ -173,8 +173,8 @@ Edward Yara
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/edward-oluyara/)
 
 Damdafayton
-- [Github](https://github.com/damdafayton)
-- [LinkedIn](https://linkedin.com/in/damdafayton)
+- GitHub: [Github](https://github.com/damdafayton)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/damdafayton)
 
 ## Contributing :handshake:
 Contributions, issues, and feature requests are welcome!
