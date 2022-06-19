@@ -12,8 +12,8 @@ RSpec.describe :Post, type: :model do
   end
 
   it 'text should be present' do
-    subject.text = 'Test text'
-    expect(subject).to be_valid
+    subject.text = nil
+    expect(subject).to_not be_valid
   end
 
   it 'author_id should be present' do
@@ -29,8 +29,8 @@ RSpec.describe :Post, type: :model do
 
   it 'title should not have more than 100 charachters' do
     # expect(subject.title).to have_at_most(100).charachters
-    subject.title = 'a' * 100
-    expect(subject).to be_valid
+    subject.title = 'a' * 101
+    expect(subject).to_not be_valid
   end
 
   it 'text should not have more than 5000 charachters' do

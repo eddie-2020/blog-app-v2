@@ -1,54 +1,12 @@
-<div class="center flex-column m-3">
-  <h1 class="text-center"> All Posts </h1>
-  <%= render partial: "shared/user", locals: {user: @user}%>
-  <div class="d-flex flex-column w-50 w-100-mobile">
-    <% if @user.posts.empty? %>
-      <div class="text-center mt-5 fw-bolder">
-        <p class="lead text-center">No posts yet!</p>
-      </div>
-    <% else %>
-      <% @user.posts.includes(:comments).each do |post| %>
-        <div class="d-flex flex-column bg-light p-2 border mb-3 border-secondary border-2">
-          <div class="d-flex align-items-center">
-            <h5 class="me-auto"><%= link_to post.title, user_post_path(id: post.id), class: "no-style" %></h5>
-          </div>
-          <p><%= post.text %></p>
-          <p class="small align-self-end">
-            Comments
-            <span class="badge bg-primary">
-              <%= post.comments_counter %>
-            </span>
-            Likes
-            <span class="badge bg-primary">
-              <%= post.likes_counter %>
-            </span>
-          </p>
-          <div class="d-flex flex-column p-2">
-            <h6 class="fw-bolder">Recent comments</h6>
-            <ul class="group-item">
-              <% if post.comments.empty? %>
-                <div class="fw-bolder">
-                  <li class="list-group-item">No comments yet.</li>
-                </div>
-              <% else %>
-                <% post.recent_comments.includes(:author).each do |comment| %>
-                <div class="">
-                  <li class="list-group-item border border-secondary border-2 p-2">
-                    <span class="lead">
-                      <h4 class="fw-bolder"><%= comment.author.name %></h4>:
-                    </span>
-                  <%= comment.text %>
-                  </li>
-                </div>
-                <% end %>
-              <% end %>
-            </ul>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
+<%= render 'shared/user', user: @user %>
+<% @posts.each_with_index { |post_, index_| %>
+  <%= render partial: 'shared/post', locals:{post: post_, index:index_, index_view: true, show_comment: true} %>
+<% } %>
+<% if author_posts_more_than?(@user) %>
+
+  <div id="posts-pagination" class='text-center'>
+    <% (1..@page_amount).each { |i| %>
+      <span><a href='<%= "#{author_posts_path(:author_id => @user.id)}?page=#{i}" %>' class="next_pg"><%= i %></a></span>
+    <% } %>
   </div>
-  <div class="btn btn-primary">
-    Pagination
-  </div>
-</div>
+<% end %>

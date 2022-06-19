@@ -18,6 +18,8 @@
 !/tmp/pids/
 !/tmp/pids/.keep
 
+.lock
+
 # Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
@@ -34,4 +36,3 @@
 !/app/assets/builds/.keep
 
 /node_modules
-/vendor
