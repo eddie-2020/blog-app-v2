@@ -1,0 +1,35 @@
+<section class="text-center pt-3 row row-cols-3 pb-2 align-items-center navigate"> 
+  <div class='d-flex flex-column flex-sm-row justify-content-sm-start justify-content-center align-items-start align-items-sm-end gap-2'>
+    <%= link_to root_path, class:'home' do %>
+      <i class="fa-solid fa-house-user"></i>
+    <% end %>
+    <%= link_to new_post_path, class:'post text-success' do %>
+      <i class="fa-solid fa-circle-plus"></i>
+    <% end %>
+  </div>
+
+  <div class='d-flex flex-column justify-content-center'>
+    <h1><a href='/' class="">IntroDuck</a></h1>
+    <p class='mb-0 fst-italic fw-bolder text-secondary'> "posts has not limitations! keep posting" </p>
+    <p class='mb-0 fs-5 text-secondary'> built with RoR </p>
+  </div>
+
+  <div class='d-flex flex-column flex-sm-row justify-content-end align-items-center gap-2'>
+    <%= link_to 'API', rswag_ui_path, class:'btn btn-dark' %>
+    <div class="d-flex gap-2 flex-column flex-sm-row">
+      <% if user_signed_in? %>
+        <%= button_to destroy_user_session_path, method: :delete, class: "border-0 text-danger bg-transparent sign_out" do %>
+          <i class="fa-solid fa-right-from-bracket"></i>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path, class: "sign_in text-success" do %>
+          <i class="fa-solid fa-right-to-bracket"></i>
+        <% end %>
+        <%= link_to new_user_registration_path, class: "sign_up text-info" do %>
+          <i class="fa-solid fa-user-plus"></i>
+        <% end %>
+      <% end %>
+    </div>  
+  </div>
+</section>
+<hr/>

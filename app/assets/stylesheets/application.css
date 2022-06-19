@@ -6,45 +6,47 @@ body {
 
 a {
   text-decoration: none;
-  font-size: 20px;
 }
 
-ul {
-  padding: 0;
+.home {
+  font-size: 2em;
 }
 
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.post {
+  font-size: 2em;
 }
 
-.center-body {
-  width: 90%;
-  margin: auto;
+.sign_in {
+  font-size: 2em;
 }
 
-.user-image {
-  width: 100px;
+.sign_up {
+  font-size: 2em;
 }
 
-@media only screen and (max-width: 900px) {
-  .w-100-mobile {
-    width: 100% !important;
-  }
+.sign_out {
+  font-size: 2em;
 }
 
-.trash-btn {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  background-color: unset;
-  border: none;
+.navigate {
+  background-image: url(/assets/leone-venter-VieM9BdZKFo-unsplash.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cursor-pointer {
   cursor: pointer;
-  width: 30px;
 }
 
-.no-style {
-  text-decoration: none;
-  color: unset;
+.next_pg {
+  background-color: grey;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.next_pg:hover {
+  background-color: transparent;
+  color: grey;
 }

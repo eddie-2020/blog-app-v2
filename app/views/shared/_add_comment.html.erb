@@ -1,0 +1,10 @@
+<%= form_with url: author_post_comments_url(params[:author_id], params[:id]), scope: :comment do |f| %>
+<div class="container">
+  <div class="mt-5">
+    <%= f.hidden_field  :post_id, :value => params[:id] %>
+    <%= f.text_area :text, size:"100x2", required: true, class:'form-control', placeholder: 'Comment' %>
+  </div>
+
+  <%= f.submit "Add Comment", class: "d-flex justify-content-center w-100 m-auto btn-sm mt-4 mb-2 btn btn-success", data: {disable_with: "Loading..."} %>
+  <% end  %>
+</div>

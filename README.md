@@ -2,11 +2,16 @@
 This Blog app is a classic example of a blog website. And the creation of a full functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 
-![](./app/assets/images/user_home_page.PNG)
-![](./app/assets/images/user_show_page.PNG)
-![](./app/assets/images/user_post_home_page.PNG)
-![](./app/assets/images/user_post_show_page.PNG)
-![](./app/assets/images/CaptureXIX.PNG)
+![](./app/assets/screenshots/sign_up_form.PNG)
+![](./app/assets/screenshots/login_form.PNG)
+![](./app/assets/screenshots/user_index.PNG)
+![](./app/assets/screenshots/user_show_page.PNG)
+![](./app/assets/screenshots/post_index_page.PNG)
+![](./app/assets/screenshots/add_post_form.PNG)
+![](./app/assets/screenshots/post_show_page.PNG)
+![](./app/assets/screenshots/forgot_passcode_form.PNG)
+![](./app/assets/screenshots/test.PNG)
+
 
 ## Milestone-1
 - For each URL you should create:
@@ -130,7 +135,14 @@ You should include some additional methods.
    - I can see the post body.
    - I can see the username of each commentor.
    - I can see the comment each commentor left.
-   
+
+## Milestone-11
+- Create an API endpoint to list all posts for a user.
+- Create an API endpoint to list all comments for a user's post.
+- Create an API endpoint to add a comment to a post. Remember that the owner of the comment is the user that makes it; it should not be set by passing a parameter.
+- Add authentication to your API endpoints.
+- Your API endpoints should receive JSON and respond JSON as well.
+
 ## Clone Project
 - STEP 1:
   - git clone `git@github.com:oluyaratosin123/Blog-App-II.git`
